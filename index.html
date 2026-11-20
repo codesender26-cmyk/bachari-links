@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>وکیل پایه یک دادگستری</title>
+<style>
+  @font-face{
+    font-family:"Vazirmatn";
+    src:url("Vazirmatn-Regular.woff2") format("woff2");
+    font-weight:400;font-display:swap;
+  }
+  @font-face{
+    font-family:"Vazirmatn";
+    src:url("Vazirmatn-Bold.woff2") format("woff2");
+    font-weight:700;font-display:swap;
+  }
+  :root{
+    --bg1:#0f1b2d;
+    --bg2:#16294a;
+    --gold:#c9a45c;
+    --gold-soft:#e6cf9b;
+    --card:#ffffff10;
+    --text:#f3efe6;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+  body{
+    min-height:100vh;
+    font-family:"Vazirmatn",Tahoma,"Segoe UI",Arial,sans-serif;
+    background:radial-gradient(circle at top,var(--bg2),var(--bg1) 70%);
+    color:var(--text);
+    display:flex;justify-content:center;
+    padding:32px 16px 40px;
+  }
+  .wrap{width:100%;max-width:420px;text-align:center}
+
+  /* عکس */
+  .photo{
+    width:190px;height:190px;margin:0 auto 22px;
+    border-radius:50%;
+    border:3px solid var(--gold);
+    box-shadow:0 0 0 6px #c9a45c22,0 12px 30px #0008;
+    overflow:hidden;background:#0d1626;
+    display:flex;align-items:center;justify-content:center;
+  }
+  .photo img{width:100%;height:100%;object-fit:cover;display:block}
+  .photo .ph{display:none;width:90px;height:90px;stroke:var(--gold);fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+
+  /* کادر اسم */
+  .name{
+    border:1.5px solid var(--gold);
+    border-radius:14px;
+    padding:14px 12px;
+    background:linear-gradient(135deg,#c9a45c22,#c9a45c08);
+    margin-bottom:28px;
+  }
+  .name h1{font-size:1.35rem;color:var(--gold-soft);font-weight:700}
+  .name p{font-size:.9rem;opacity:.8;margin-top:4px}
+
+  /* کارت‌ها */
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .card{
+    background:var(--card);
+    border:1px solid #c9a45c44;
+    border-radius:18px;
+    padding:18px 10px 14px;
+    display:flex;flex-direction:column;align-items:center;gap:12px;
+  }
+  .card svg.logo{width:52px;height:52px}
+  .card img.logo{width:52px;height:52px;border-radius:12px;object-fit:cover}
+  .btn{
+    display:block;width:100%;
+    text-decoration:none;
+    background:var(--gold);color:#1a1405;
+    font-weight:700;font-size:.92rem;
+    padding:10px 6px;border-radius:10px;
+    transition:transform .15s,background .15s;
+  }
+  .btn:active{transform:scale(.96)}
+  .btn:hover{background:var(--gold-soft)}
+  .foot{margin-top:28px;font-size:.78rem;opacity:.5}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- عکس: فایل عکس رو با اسم photo.jpg کنار همین فایل بذارید -->
+  <div class="photo">
+    <img src="photo.jpg" alt="" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+    <svg class="ph" viewBox="0 0 24 24"><path d="M12 3v18M7 21h10M5 7h14M5 7l-3 7a3 3 0 0 0 6 0L5 7zM19 7l-3 7a3 3 0 0 0 6 0l-3-7z"/></svg>
+  </div>
+
+  <!-- کادر اسم: متن زیر رو عوض کنید -->
+  <div class="name">
+    <h1>حمدان بچاری</h1>
+    <p>وکیل پایه یک دادگستری</p>
+  </div>
+
+  <div class="grid">
+
+    <!-- واتساپ: شماره رو بدون صفر اول و با کد کشور بنویسید، مثل 989121234567 -->
+    <div class="card">
+      <svg class="logo" viewBox="0 0 48 48"><circle cx="24" cy="24" r="22" fill="#25D366"/><path d="M24 11a13 13 0 0 0-11.2 19.6L11 37l6.600-1.700A13 13 0 1 0 24 11z" fill="none" stroke="#fff" stroke-width="2.4" stroke-linejoin="round"/><path d="M19.500 18.500c.5-1 1.200-.9 1.700-.9.300 0 .6.600 1 1.500.3.800-.8 1.300-.5 1.900.9 1.700 2.200 2.900 4 3.800.6.300 1.200-.9 1.900-.6.900.4 1.500.8 1.600 1.100.1.300-.2 1.400-1.300 2-1.100.6-2.900.4-5-.7-2.300-1.300-4.100-3.200-4.900-5.400-.5-1.400-.1-2.300.5-3.700z" fill="#fff"/></svg>
+      <a class="btn" href="https://wa.me/989166175176" target="_blank" rel="noopener">پیام در واتساپ</a>
+    </div>
+
+    <!-- اینستاگرام: به جای your_id آیدی خودتون رو بنویسید -->
+    <div class="card">
+      <svg class="logo" viewBox="0 0 48 48">
+        <defs><linearGradient id="ig" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#feda75"/><stop offset=".35" stop-color="#fa7e1e"/><stop offset=".6" stop-color="#d62976"/><stop offset="1" stop-color="#4f5bd5"/></linearGradient></defs>
+        <rect x="2" y="2" width="44" height="44" rx="12" fill="url(#ig)"/>
+        <rect x="12" y="12" width="24" height="24" rx="7" fill="none" stroke="#fff" stroke-width="2.6"/>
+        <circle cx="24" cy="24" r="5.500" fill="none" stroke="#fff" stroke-width="2.6"/>
+        <circle cx="31.500" cy="16.500" r="1.700" fill="#fff"/>
+      </svg>
+      <a class="btn" href="https://www.instagram.com/bachari1051" target="_blank" rel="noopener">صفحه اینستاگرام</a>
+    </div>
+
+    <!-- تماس تلفنی: شماره رو با +98 بنویسید -->
+    <div class="card">
+      <svg class="logo" viewBox="0 0 48 48"><circle cx="24" cy="24" r="22" fill="#2f8f5b"/><path d="M33.500 29.500l-4-1.800a1.600 1.600 0 0 0-1.900.5l-1.300 1.600a12 12 0 0 1-5.600-5.600l1.600-1.300a1.600 1.600 0 0 0 .5-1.900l-1.800-4a1.600 1.600 0 0 0-1.800-.9l-2.800.7a2 2 0 0 0-1.500 2A18.500 18.500 0 0 0 30.700 36.700a2 2 0 0 0 2-1.500l.7-2.800a1.600 1.600 0 0 0-.9-1.900z" fill="#fff"/></svg>
+      <a class="btn" href="tel:+989166175176">تماس تلفنی</a>
+    </div>
+
+    <!-- روبیکا: به جای your_id آیدی روبیکای خودتون رو بنویسید -->
+  <div class="card">
+  <img class="logo" src="rubika.png" alt="">
+  <a class="btn" href="https://rubika.ir/Bachari2020" target="_blank" rel="noopener">پیام در روبیکا</a>
+  </div>
+
+  </div>
+
+</div>
+</body>
+</html>
